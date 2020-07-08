@@ -17,3 +17,13 @@ jobs:
         run: cmake --build build --config Release
       - name: run
         run: ./build/Release/hello_world.exe
+  build-posix:
+    runs-on: [macos-latest, ubuntu-latest]
+    steps:
+      - uses: actions/checkout@v2
+      - name: configure
+        run: mkdir build && cd build && cmake ..
+      - name: build
+        run: cmake --build build
+      - name: run
+        run: ./build/hello_world

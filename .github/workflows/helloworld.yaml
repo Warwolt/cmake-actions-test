@@ -17,4 +17,6 @@ jobs:
       - name: configure
         run: mkdir build && cd build && cmake ..
       - name: build
-        run: cmake --build build
+        run: cmake --build build --config Release
+      - name: run
+        run: ./Release/hello_world

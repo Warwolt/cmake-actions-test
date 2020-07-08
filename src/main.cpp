@@ -1,5 +1,7 @@
 /**
  * Test program to have something for CI to build.
+ *
+ * Copyright (C) 2020 Rasmus Källqvist
  */
 #include <iostream>
 

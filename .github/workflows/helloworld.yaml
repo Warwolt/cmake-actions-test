@@ -16,3 +16,5 @@ jobs:
       - uses: actions/checkout@v2
       - name: one-liner
         run: cat ${{ github.workspace }}/src/main.cpp
+      - name: check-cmake-version
+        run:  cmake --version

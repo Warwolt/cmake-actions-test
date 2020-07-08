@@ -19,4 +19,4 @@ jobs:
       - name: build
         run: cmake --build build --config Release
       - name: run
-        run: tree
+        run: ls

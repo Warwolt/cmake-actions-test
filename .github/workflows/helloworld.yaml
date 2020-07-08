@@ -15,14 +15,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: configure
-        run: |
-          mkdir build && cd build && cmake ..
-          pwd
+        run: mkdir build && cd build && cmake ..
       - name: build
-        run: |
-          pwd
-
-      # - name: one-liner
-      #   run: cat ${{ github.workspace }}/src/main.cpp
-      # - name: check-cmake-version
-      #   run:  cmake --version
+        run: cmake --build build

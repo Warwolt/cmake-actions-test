@@ -7,11 +7,8 @@ on:
     branches: [master]
 
 jobs:
-  build:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
+  build-windows:
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
       - name: configure
@@ -19,4 +16,4 @@ jobs:
       - name: build
         run: cmake --build build --config Release
       - name: run
-        run: ls build
+        run: ./build/Release/hello_world.exe

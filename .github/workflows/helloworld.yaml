@@ -18,7 +18,10 @@ jobs:
   #     - name: run
   #       run: ./build/Release/hello_world.exe
   build-posix:
-    runs-on: [macos-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
     steps:
       - uses: actions/checkout@v2
       - name: configure

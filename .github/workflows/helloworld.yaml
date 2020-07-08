@@ -1,17 +1,15 @@
-name: Hello World
+name: Continuous Integration
 
-on: push
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
 
 jobs:
-  hello-world:
-    name: Say Hello World
+  build:
     runs-on: ubuntu-latest
     steps:
-    - name: Print a greeting
-      env:
-        MY_VAR: Hi there! My name is
-        FIRST_NAME: Rasmus
-        MIDDLE_NAME: Karlsson
-        LAST_NAME: Källqvist
-      run: |
-        echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.
+      - uses: actions/checkout@v2
+      - name: one-liner
+        run: echo "Hello, World!"

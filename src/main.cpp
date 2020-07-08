@@ -1,3 +1,6 @@
+/**
+ * Test program to have something for CI to build.
+ */
 #include <iostream>
 
 int main()

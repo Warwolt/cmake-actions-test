@@ -15,9 +15,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: configure
-        run: mkdir build && cd build && cmake ..
+        run: |
+          mkdir build && cd build && cmake ..
+          pwd
       - name: build
-        run: cmake --build . --config Release
+        run: |
+          cmake --build . --config Release
+          pwd
 
       # - name: one-liner
       #   run: cat ${{ github.workspace }}/src/main.cpp

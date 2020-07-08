@@ -12,4 +12,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: one-liner
-        run: echo "Hello, World!"
+        run: cat ${{ github.workspace }}/src/main.cpp
